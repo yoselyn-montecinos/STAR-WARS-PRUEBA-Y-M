@@ -1,9 +1,9 @@
 function createCardElement(data, containerId) {
   for (let i = 0; i < data.length; i++) {
-    const person = data[i];  // los datos del arreglo = persona
+    const person = data[i]; 
 
 
-// Creo los elementos del DOM
+
     let card = document.createElement('div');
     card.className = 'card ms-2 my-3';
 
@@ -16,8 +16,8 @@ function createCardElement(data, containerId) {
     let image = document.createElement('img');
     image.src = 'https://3.bp.blogspot.com/-JmLcUwhEefg/WG69P9yKmyI/AAAAAAAAKcY/SrvuFPgaiY8s3yca6wv8FOMGnsheE95JQCLcB/s1600/LEGO_Star_Wars_Episode_1_logo.png';
     image.alt = 'Logo de LEGO Star Wars Episode 1';
-    image.style.width = '30px'; // Establece el ancho de la imagen en 30 píxeles
-
+    image.style.width = '30px'; 
+    
     let textDiv = document.createElement('div');
     textDiv.className = 'ms-3';
 
@@ -36,14 +36,13 @@ function createCardElement(data, containerId) {
     cardBody.appendChild(textDiv);
     card.appendChild(cardBody);
 
-    document.getElementById(containerId).appendChild(card);  // Envio las card!!
+    document.getElementById(containerId).appendChild(card);  
   }
 }
 
-function fetchPeopleDataOne() { // CONSUMO DE API 
+function fetchPeopleDataOne() { 
   const promises = []; 
 
-  //Recorrido hasta la posicion 5
   for (let i = 1; i <= 5; i++) {
     const promise = fetch(`https://swapi.dev/api/people/${i}/`)
       .then(response => response.json())
@@ -51,7 +50,7 @@ function fetchPeopleDataOne() { // CONSUMO DE API
         console.log("Data obtenida:", data);
 
         document.getElementById('informacionCantidad').innerText = ` 1 - ${Object.keys(data).length-11}`;
-        document.getElementById('informacionCantidad').style.color = 'white';
+        document.getElementById('informacionCantidad').style.color = 'Blue';
 
         return data;
       })
@@ -72,7 +71,7 @@ function fetchPeopleDataTwo() {
       .then(data => {
         console.log("Data obtenida:", data);
         document.getElementById('informacionCantidadDos').innerText = `6 - ${Object.keys(data).length-5}`;
-        document.getElementById('informacionCantidadDos').style.color = 'white';
+        document.getElementById('informacionCantidadDos').style.color = 'Blue';
 
         return data;
       })
@@ -84,9 +83,6 @@ function fetchPeopleDataTwo() {
   return Promise.all(promises);
 }
 
-
-
-
 function fetchPeopleDataThree() {
   const promises = [];
 
@@ -96,7 +92,7 @@ function fetchPeopleDataThree() {
       .then(data => {
         console.log("Data obtenida TRESSS:", data);
         document.getElementById('informacionCantidadTres').innerText = `12 - ${Object.keys(data).length+1}`;
-        document.getElementById('informacionCantidadTres').style.color = 'white';
+        document.getElementById('informacionCantidadTres').style.color = 'Blue';
         return data;
       })
       .catch(error => console.error('Error:', error));
