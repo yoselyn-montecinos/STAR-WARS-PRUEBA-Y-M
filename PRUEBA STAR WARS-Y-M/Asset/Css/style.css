@@ -1,0 +1,41 @@
+
+body {
+  background-image: url("https://th.bing.com/th/id/R.617fec353e769c1d12711b0e414d3be6?rik=iJc5Qh6Gael65w&riu=http%3a%2f%2fwww.cpcmania.com%2fDocs%2fProgramming%2fCampo_de_estrellas_2D_01.gif&ehk=IFhz6YwUoyPkX15vksHtOUd9H%2fENUiyA%2fDRQAFuDM68%3d&risl=&pid=ImgRaw&r=0");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.imagenPersonaje{
+  background-image: url("https://3.bp.blogspot.com/-JmLcUwhEefg/WG69P9yKmyI/AAAAAAAAKcY/SrvuFPgaiY8s3yca6wv8FOMGnsheE95JQCLcB/s1600/LEGO_Star_Wars_Episode_1_logo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.circuloTarjetas{
+  width: 40px;
+   height: 40px;
+   margin-bottom: 30px;
+}
+
+
+
+.colorChocolate{
+  background-color: chocolate;
+}
+
+.colorVerdeAgua{
+  background-color: rgb(127, 237, 149);
+}
+
+.colorInformativo{
+  background-color: rgb(54, 96, 221);
+}
+
+
+.colorAzulClarito{
+
+background-color: rgb(143, 148, 204);
+}
+
+
